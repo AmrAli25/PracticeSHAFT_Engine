@@ -13,19 +13,27 @@ public class HomePageTests {
     private SHAFT.GUI.WebDriver driver;
     private SHAFT.TestData.JSON testData;
 
-    @Epic("Open catcher homePage")
+    @Epic("Open My shop homePage")
     @Story("Validate HomePage Title")
-    @Description("Given I am on the HomePage page,\nThen the browser title should be 'Catcher | HomePage'.")
+    @Description("Given I am on the HomePage page,\nThen the browser title should be 'My shop'.")
     @Test(description = "Check that HomePage Page Title is correct.")
     public void checkHomePageTitleIsCorrect() {
         new HomePage(driver).verifyBrowserTitleIsCorrect();
     }
 
-    @Epic("Open catcher homePage")
-    @Story("Validate HomePage Sections")
-    @Description("Given I am on the HomePage page,\nThen the sections in HomePage should be present.")
+    @Epic("Open MyShop homePage")
+    @Story("Validate HomePage SignIn button")
+    @Description("Given I am on the HomePage page,\nThen the SignIn button in HomePage should be present.")
+    @Test(description = "Check that SignIn button is present.")
+    public void validateVisibilityOfSignInButtonInHomePage() {
+        new HomePage(driver).validateVisibiltyOfSigninButton();
+    }
+
+    @Epic("Open MyShop homePage")
+    @Story("Validate HomePage Categories Section")
+    @Description("Given I am on the HomePage page,\nThen the Categories section in HomePage should be present.")
     @Test(description = "Check that Categories section is present.")
-    public void validateCategoriesSectionInHomePage() {
+    public void validateVisibilityOfCategoriesSectionInHomePage() {
         new HomePage(driver).validateVisibilityOfHomeCategoriesSection();
     }
 

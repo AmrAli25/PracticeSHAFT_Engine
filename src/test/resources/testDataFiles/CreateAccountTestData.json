@@ -1,6 +1,7 @@
 {
   "UserName": "Automation",
   "UserMail": "testing_",
+  "ExistingUserMail": "test@test.com",
   "Gender": "1",
   "UserPassword": "p@ssw0rd",
   "UserFirstName": "Automation",
@@ -18,6 +19,7 @@
     "Signup": "CREATE AN ACCOUNT",
     "AccountInfo": "YOUR PERSONAL INFORMATION",
     "AccountCreated": "Your account has been created.",
-    "AccountDeleted": "ACCOUNT DELETED!"
+    "AccountDeleted": "ACCOUNT DELETED!",
+    "AccountExist": "An account using this email address has already been registered. Please enter a valid password or request a new one."
   }
 }

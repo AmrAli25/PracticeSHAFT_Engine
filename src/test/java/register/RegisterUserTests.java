@@ -15,17 +15,17 @@ import pages.MyAccountPage;
 import pages.SignUpSignInPage;
 
 @Epic("Automation Exercise using SHAFT")
-@Feature("User Managment ")
-@Story("Create New Account")
+@Feature("User Management ")
+@Story("Register New User")
 
-public class CreateAccountsTests {
+public class RegisterUserTests {
 
     private final String timeStamp = String.valueOf(System.currentTimeMillis());
     private SHAFT.GUI.WebDriver driver;
     private SHAFT.TestData.JSON testData;
 
-    @Test(description = "Create Account Test - GUI")
-    @Description("Create a new account using valid data, so the account will be created and the user logged in to the system with successfull message")
+    @Test(description = "Register New User Test - GUI")
+    @Description("Create a new account using valid data, so the account will be created and the user logged in to the system with successfully message")
     public void createNewAccountTestGui() {
         new HomePage(driver).
                 validateVisibiltyOfSigninButton()
@@ -41,7 +41,6 @@ public class CreateAccountsTests {
                         testData.getTestData("UserBirthYear"));
         new MyAccountPage(driver)
                 .validateSuccessfulAlert(testData.getTestData("Messages.AccountCreated"));
-
 
     }
 
